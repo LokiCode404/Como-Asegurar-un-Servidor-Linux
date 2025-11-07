@@ -1,10 +1,10 @@
-# Cómo asegurar un servidor Linux
-
-Guía práctica y en evolución para asegurar un servidor Linux que, con suerte, también te enseñe un poco sobre seguridad y por qué es importante.
-
 > **Nota sobre el origen**  
 > Este repositorio es una **traducción al castellano** del proyecto original **“How To Secure A Linux Server”** de `imthenachoman`, disponible en: https://github.com/imthenachoman/How-To-Secure-A-Linux-Server  
 > Esta traducción mantiene **la misma licencia** que el proyecto original: **CC BY-SA 4.0**. Debes mantener la atribución al autor original y compartir bajo la misma licencia.
+
+# Cómo asegurar un servidor Linux
+
+Guía práctica y en evolución para asegurar un servidor Linux que, con suerte, también te enseñe un poco sobre seguridad y por qué es importante.
 
 [![CC-BY-SA](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](#licencia)
 
