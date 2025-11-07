@@ -1,3 +1,10 @@
+# Asegurar nginx
+
+Traducción al castellano del documento `nginx.md` referenciado en el README. 
+Se mantienen los bloques de configuración exactamente igual para que puedas copiarlos sin cambios.
+
+---
+
 # Secure nginx
 
 Global resource: [webdock.io](https://webdock.io/en/docs/how-guides/security-guides/how-to-configure-security-headers-in-nginx-and-apache)

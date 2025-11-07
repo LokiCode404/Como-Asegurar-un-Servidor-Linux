@@ -1,3 +1,10 @@
+# Endurecimiento del kernel de Linux con `sysctl`
+
+Esta es la versión en castellano del documento original `linux-kernel-sysctl-hardening.md` referenciado en el README. 
+Las claves `sysctl` se mantienen en inglés porque son literales del sistema; se han traducido los encabezados y el contexto.
+
+---
+
 # Linux Kernel `sysctl` Hardening
 
 ## Table of Contents
