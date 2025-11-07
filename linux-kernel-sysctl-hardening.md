@@ -5,18 +5,18 @@ Las claves `sysctl` se mantienen en inglés porque son literales del sistema; se
 
 ---
 
-# Linux Kernel `sysctl` Hardening
+# Endurecimiento del kernel de Linux con `sysctl`
 
-## Table of Contents
+## Índice
 
-- [Overview](#overview)
-- [Documentation](#documentation)
-- [Disclaimer](#disclaimer)
-- [Keys](#keys)
+- [Visión general](#vision-general)
+- [Documentación](#documentacion)
+- [Aviso](#aviso)
+- [Claves](#claves)
 
-## Overview
+## Visión general
 
-This is a combined list of all the `sysctl` hardening recommendations I could find across multiple sites:
+Esta es una lista combinada de todas las recomendaciones de endurecimiento con `sysctl` que pude encontrar en varios sitios:
 
 - https://www.cyberciti.biz/faq/linux-kernel-etcsysctl-conf-security-hardening/
 - https://geektnt.com/sysctl-conf-hardening.html
@@ -24,17 +24,17 @@ This is a combined list of all the `sysctl` hardening recommendations I could fi
 - https://cloudpro.zone/index.php/2018/01/30/debian-9-3-server-setup-guide-part-5/
 - https://github.com/klaver/sysctl/blob/master/sysctl.conf
 
-## Documentation
+## Documentación
 
-Documentation for **most** of these keys can be found at https://github.com/torvalds/linux/blob/master/Documentation. However, the documentation seems to be for the 2.2 kernel. I cannot find any newer documentation. If you know where I can find newer documentation please submit a [new issue](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server/issues/new).
+La documentación de **la mayoría** de estas claves se puede encontrar en https://github.com/torvalds/linux/blob/master/Documentation. Sin embargo, parece que esa documentación es para el kernel 2.2. No he podido encontrar documentación más reciente. Si sabes dónde puedo encontrar documentación más nueva, por favor abre una issue nueva en el repositorio original.
 
-## Disclaimer
+## Aviso
 
-I do not know what most of these settings do. This list is being provided just as reference material. I take no responsibility for anything.
+No sé qué hacen la mayoría de estos ajustes. Esta lista se ofrece solo como material de referencia. No me hago responsable de nada.
 
-## Keys
+## Claves
 
-|`key=value`|Note|[Documentation|
+|`key=value`|Nota|[Documentación|
 |--|--|--|
 |`fs.file-max = 65535`||[/sysctl/fs.txt](https://github.com/torvalds/linux/blob/master/Documentation/sysctl/fs.txt)|
 |`fs.protected_hardlinks = 1`||[/sysctl/fs.txt](https://github.com/torvalds/linux/blob/master/Documentation/sysctl/fs.txt)|
@@ -76,10 +76,10 @@ I do not know what most of these settings do. This list is being provided just a
 |`net.ipv4.conf.default.rp_filter = 1`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv4.conf.default.secure_redirects = 0`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv4.conf.default.send_redirects = 0`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
-|`net.ipv4.conf.eth0.accept_redirects = 0`|change `eth0` to your network interface|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
-|`net.ipv4.conf.eth0.accept_source_route = 0`|change `eth0` to your network interface|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
-|`net.ipv4.conf.eth0.log_martians = 0`|change `eth0` to your network interface|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
-|`net.ipv4.conf.eth0.rp_filter = 1`|change `eth0` to your network interface|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
+|`net.ipv4.conf.eth0.accept_redirects = 0`|cambia `eth0` por tu interfaz de red|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
+|`net.ipv4.conf.eth0.accept_source_route = 0`|cambia `eth0` por tu interfaz de red|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
+|`net.ipv4.conf.eth0.log_martians = 0`|cambia `eth0` por tu interfaz de red|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
+|`net.ipv4.conf.eth0.rp_filter = 1`|cambia `eth0` por tu interfaz de red|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv4.conf.lo.accept_redirects = 0`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv4.conf.lo.accept_source_route = 0`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv4.conf.lo.log_martians = 0`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
@@ -144,8 +144,8 @@ I do not know what most of these settings do. This list is being provided just a
 |`net.ipv6.conf.default.forwarding = 0`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv6.conf.default.max_addresses = 1`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv6.conf.default.router_solicitations = 0`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
-|`net.ipv6.conf.eth0.accept_ra=0`|change `eth0` to your network interface|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
-|`net.ipv6.conf.eth0.autoconf = 0`|change `eth0` to your network interface|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
+|`net.ipv6.conf.eth0.accept_ra=0`|cambia `eth0` por tu interfaz de red|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
+|`net.ipv6.conf.eth0.autoconf = 0`|cambia `eth0` por tu interfaz de red|[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv6.ip6frag_high_thresh = 262144`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv6.ip6frag_low_thresh = 196608`||[/networking/ip-sysctl.txt](https://github.com/torvalds/linux/blob/master/Documentation/networking/ip-sysctl.txt)|
 |`net.ipv6.route.flush = 1`|||
